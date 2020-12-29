@@ -42,7 +42,6 @@ class SpecialPromo extends StatelessWidget {
         SizedBox(height: 12.0),
         Card(
           child: Container(
-            // padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 17.0),
             decoration: BoxDecoration(
               image: new DecorationImage(
                   image: new AssetImage(Images.SPECIAL_PROMO),

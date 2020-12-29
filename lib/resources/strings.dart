@@ -20,4 +20,7 @@ class Strings {
   static const ROAM_WORRY_FREE='Roam worry free!';
   static const EXPLORE_ROAMING= 'Explore Roaming Packs';
   static const LATEST_PROMOS = 'Latest Promos';
+  static const SPOTIFY_PREMIUM ='Spotify Premium';
+  static const PACKAGE_TITLE='Subscribe for';
+  static const PACKAGE_PRICE='P 129.00';
 }
