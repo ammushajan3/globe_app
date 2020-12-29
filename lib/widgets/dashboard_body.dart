@@ -47,7 +47,7 @@ class DashboardBody extends StatelessWidget {
                           children: [
                             Text(Strings.PROMO_NAME,style: Theme.of(context).textTheme.headline5),
                             SizedBox(height: 8.0,),
-                            Text(Strings.PROMO_TITLE,style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold,foreground: Paint()..shader = linearGradient),),
+                            Text(Strings.PROMO_TITLE,style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold,foreground: Paint()..shader = promoTitleGradient ),),
                             Text(Strings.PROMO_SUBTITLE,style: Theme.of(context).textTheme.caption),
                           ],
                       ),
