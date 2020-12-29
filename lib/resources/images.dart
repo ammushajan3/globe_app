@@ -6,4 +6,5 @@ class Images {
   static const SPECIAL_PROMO = 'assets/images/special_promo.png';
   static const SPOTIFY_ICON ='assets/images/spotify-icon.png';
   static const LATEST_PROMO='assets/images/latest-promo.png';
+  static const ORANGE_ICON ='assets/images/orange_reward_icon.png';
 }

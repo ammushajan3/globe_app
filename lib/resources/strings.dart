@@ -23,4 +23,7 @@ class Strings {
   static const SPOTIFY_PREMIUM ='Spotify Premium';
   static const PACKAGE_TITLE='Subscribe for';
   static const PACKAGE_PRICE='P 129.00';
+  static const GLOBE_REWARDS='Globe Rewards';
+  static const YOUR_REWARD_POINT = 'Your Reward Points';
+  static const POINTS = '7250 Pts';
 }
