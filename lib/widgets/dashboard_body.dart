@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:task_app/resources/images.dart';
 
 import 'package:task_app/resources/strings.dart';
 import 'package:task_app/themes/color.dart';
+import 'package:task_app/widgets/common/special_promo.dart';
 import 'package:task_app/widgets/dashboard_blue_banner.dart';
 import 'package:task_app/widgets/plan.dart';
 
@@ -31,91 +31,53 @@ class DashboardBody extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Text(
-                    Strings.SPECIAL_PROMOS,
-                    style: TextStyle(
-                        fontSize: 18.0,
-                        fontWeight: FontWeight.bold,
-                        foreground: Paint()..shader = linearGradient),
+                  SpecialPromo(
+                    promoTitle: Strings.SPECIAL_PROMOS,
+                    planName: Strings.PROMO_NAME,
+                    planTitle: Strings.PROMO_TITLE,
+                    planSubTitle: Strings.PROMO_SUBTITLE,
+                    buttonTitle: Strings.CREATE_YOUR_OWN_PROMO,
                   ),
-                  SizedBox(height:12.0),
-                  Card(
-                    child: Container(
-                      // padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 17.0),
-                      decoration: BoxDecoration(
-                        image: new DecorationImage(
-                            image: new AssetImage(Images.SPECIAL_PROMO),
-                            fit: BoxFit.fill),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 17.0),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(Strings.PROMO_NAME,
-                                    style: Theme.of(context).textTheme.headline5),
-                                SizedBox(
-                                  height: 8.0,
-                                ),
-                                Text(
-                                  Strings.PROMO_TITLE,
-                                  style: TextStyle(
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.bold,
-                                      foreground: Paint()
-                                        ..shader = promoTitleGradient),
-                                ),
-                                Text(
-                                  Strings.PROMO_SUBTITLE,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .subtitle1
-                                      .apply(color: AppColors.COLOR_WHITE),
-                                ),
-                              ],
+                  Column(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.only(top:40.0,bottom:12.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              Strings.LATEST_PROMOS,
+                              style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  foreground: Paint()..shader = linearGradient),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            decoration: new BoxDecoration(
-                              borderRadius: BorderRadius.circular(12),
-                              gradient: new LinearGradient(
-                                colors: [
-                                  Color.fromRGBO(0, 0, 0, 0.9),
-                                  Color.fromRGBO(0, 0, 0, 0.6)
-                                ],
-                                begin: FractionalOffset.centerLeft,
-                                end: FractionalOffset.centerRight,
-                              ),
-                            ),
-                            child: FlatButton(
-                                padding: EdgeInsets.all(0.0),
-                                onPressed: () {
-                                  /*...*/
-                                },
-                                child: Row(
-                                  children: [
-                                    Text(Strings.CREATE_YOUR_OWN_PROMO,
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .headline5),
-                                    Icon(
-                                      Icons.chevron_right_sharp,
-                                      color: AppColors.COLOR_WHITE,
-                                    )
-                                  ],
-                                )),
-                          )
-                        ],
+                            Text(Strings.VIEW_ALL,style: Theme.of(context).textTheme.headline6,),
+                          ],
+                        ),
                       ),
-                    ),
-                  )
+                      Container(
+                        height: 168.0,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: [
+
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+
+                  SpecialPromo(
+                    promoTitle: Strings.ROAMING_PLANS,
+                    planName: Strings.PROMO_NAME,
+                    planTitle: Strings.PLAN_FOR_FOREIGN_TRIP,
+                    planSubTitle: Strings.ROAM_WORRY_FREE,
+                    buttonTitle: Strings.EXPLORE_ROAMING,
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

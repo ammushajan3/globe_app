@@ -15,4 +15,9 @@ class Strings {
   static const PROMO_TITLE ='Create What Matters';
   static const PROMO_SUBTITLE='Promo that’s all you!';
   static const CREATE_YOUR_OWN_PROMO ='Create your own Promo';
+  static const ROAMING_PLANS ='Roaming Plans';
+  static const PLAN_FOR_FOREIGN_TRIP='Planing for a foreign trip?';
+  static const ROAM_WORRY_FREE='Roam worry free!';
+  static const EXPLORE_ROAMING= 'Explore Roaming Packs';
+  static const LATEST_PROMOS = 'Latest Promos';
 }
