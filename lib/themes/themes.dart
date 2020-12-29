@@ -15,11 +15,26 @@ class Themes {
             fontSize: 16.0,
             color: AppColors.COLOR_BLACK,
             fontWeight: FontWeight.bold),
-        bodyText1: TextStyle(fontSize: 20.0,fontWeight: FontWeight.w600,color:AppColors.COLOR_DARK_GREY),
-        bodyText2: TextStyle(fontSize: 9.0,fontWeight: FontWeight.w600,color: AppColors.COLOR_WHITE),
-        caption: TextStyle(fontWeight: FontWeight.w600,fontSize: 12.0,color:AppColors.COLOR_WHITE),
-        headline5: TextStyle(fontSize: 14.0,fontWeight: FontWeight.w600,color: AppColors.COLOR_WHITE),
-        headline6: TextStyle(fontWeight: FontWeight.w600,fontSize: 12.0,color: AppColors.COLOR_LIGHT_BLUE),
+        bodyText1: TextStyle(
+            fontSize: 20.0,
+            fontWeight: FontWeight.w600,
+            color: AppColors.COLOR_DARK_GREY),
+        bodyText2: TextStyle(
+            fontSize: 9.0,
+            fontWeight: FontWeight.w600,
+            color: AppColors.COLOR_WHITE),
+        caption: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 12.0,
+            color: AppColors.COLOR_WHITE),
+        headline5: TextStyle(
+            fontSize: 14.0,
+            fontWeight: FontWeight.w600,
+            color: AppColors.COLOR_WHITE),
+        headline6: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 12.0,
+            color: AppColors.COLOR_LIGHT_BLUE),
       ),
     );
   }

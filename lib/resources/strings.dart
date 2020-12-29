@@ -14,4 +14,5 @@ class Strings {
   static const PROMO_NAME ='GoSakto';
   static const PROMO_TITLE ='Create What Matters';
   static const PROMO_SUBTITLE='Promo that’s all you!';
+  static const CREATE_YOUR_OWN_PROMO ='Create your own Promo';
 }
