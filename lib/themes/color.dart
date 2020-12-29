@@ -9,4 +9,5 @@ class AppColors {
   static const Color COLOR_ICE_BLUE=Color(0xFFf1f4ff);
   static const Color COLOR_WARM_BLUE=Color(0xFF3B41E2);
   static const Color COLOR_LIGHT_BLUE=Color(0xFF5056FF);
+  static const Color COLOR_LIGHT_GREY=Color(0xFF7B7BB3);
 }

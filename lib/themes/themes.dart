@@ -27,6 +27,11 @@ class Themes {
             fontWeight: FontWeight.w600,
             fontSize: 12.0,
             color: AppColors.COLOR_WHITE),
+        headline4: TextStyle(
+          fontSize: 15.0,
+          fontWeight: FontWeight.w500,
+          color: AppColors.COLOR_LIGHT_GREY,
+        ),
         headline5: TextStyle(
             fontSize: 14.0,
             fontWeight: FontWeight.w600,

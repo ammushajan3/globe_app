@@ -26,4 +26,8 @@ class Strings {
   static const GLOBE_REWARDS='Globe Rewards';
   static const YOUR_REWARD_POINT = 'Your Reward Points';
   static const POINTS = '7250 Pts';
+  static const HERE_IS_WHAT='Here is what you can get';
+  static const FIND_OUT_MORE='Find Out More';
+  static const NUMBER_POINTS = '1000 Pts';
+  static const OFFER = 'P 500 OFF on Shoes';
 }

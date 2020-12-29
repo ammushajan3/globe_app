@@ -6,6 +6,7 @@ import 'package:task_app/themes/color.dart';
 import 'file:///C:/Users/Admin/AndroidStudioProjects/globe_app/lib/widgets/latest_promo_card.dart';
 import 'package:task_app/widgets/common/special_promo.dart';
 import 'package:task_app/widgets/dashboard_blue_banner.dart';
+import 'package:task_app/widgets/find_out_more.dart';
 import 'package:task_app/widgets/globe_rewards_section.dart';
 import 'package:task_app/widgets/plan.dart';
 
@@ -46,6 +47,52 @@ class DashboardBody extends StatelessWidget {
                     buttonTitle: Strings.EXPLORE_ROAMING,
                   ),
                   GlobeRewards(),
+                  Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          Strings.HERE_IS_WHAT,
+                          style: Theme.of(context).textTheme.headline4,
+                        ),
+                        Container(
+                          height: 180.0,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                                child:Container(
+                                  decoration: BoxDecoration(
+                                    image: new DecorationImage(
+                                        image:
+                                        new AssetImage(Images.SHOE_COVER_IMG),
+                                        fit: BoxFit.fill),
+                                  ),
+                                  padding: EdgeInsets.fromLTRB(16.0, 20.0, 16.0, 20),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Image.asset(
+                                        Images.ALDO_LOGO,
+                                        height: 28.0,
+                                        width: 64.0,
+                                      ),
+                                      Text(Strings.NUMBER_POINTS),
+                                      Text(Strings.OFFER),
+                                    ],
+                                  ),
+                                ) ,
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  FindOutMoreButton(),
                 ],
               ),
             ),

@@ -13,15 +13,13 @@ class SocialMediaCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: new DecorationImage(
-              image:
-              new AssetImage(Images.LATEST_PROMO),
-              fit: BoxFit.fill),
+              image: new AssetImage(Images.LATEST_PROMO), fit: BoxFit.fill),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(20, 20, 0,26),
+              padding: EdgeInsets.fromLTRB(20, 20, 0, 26),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -34,7 +32,6 @@ class SocialMediaCard extends StatelessWidget {
                     height: 15.0,
                   ),
                   Text(Strings.SPOTIFY_PREMIUM),
-
                 ],
               ),
             ),
@@ -58,9 +55,18 @@ class SocialMediaCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(Strings.PACKAGE_TITLE,style: Theme.of(context).textTheme.headline5.apply(fontWeightDelta: -1),),
-                    SizedBox(height: 2.0,),
-                    Text(Strings.PACKAGE_PRICE,style: Theme.of(context).textTheme.headline5),
+                    Text(
+                      Strings.PACKAGE_TITLE,
+                      style: Theme.of(context)
+                          .textTheme
+                          .headline5
+                          .apply(fontWeightDelta: -1),
+                    ),
+                    SizedBox(
+                      height: 2.0,
+                    ),
+                    Text(Strings.PACKAGE_PRICE,
+                        style: Theme.of(context).textTheme.headline5),
                   ],
                 ),
               ),

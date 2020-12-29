@@ -7,4 +7,6 @@ class Images {
   static const SPOTIFY_ICON ='assets/images/spotify-icon.png';
   static const LATEST_PROMO='assets/images/latest-promo.png';
   static const ORANGE_ICON ='assets/images/orange_reward_icon.png';
+  static const ALDO_LOGO = 'assets/images/aldo_logo.png';
+  static const SHOE_COVER_IMG = 'assets/images/shoe.jpg';
 }
