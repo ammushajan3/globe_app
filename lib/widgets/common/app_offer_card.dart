@@ -16,26 +16,33 @@ import 'package:task_app/widgets/offers_discount_card_section.dart';
 import 'package:task_app/widgets/plan.dart';
 
 class AppOfferCard extends StatelessWidget {
+  final String logo;
+  final Color backgroundColorOne;
+  final Color backgroundColorTwo;
+  AppOfferCard({
+    this.logo,
+    this.backgroundColorOne,
+    this.backgroundColorTwo,
+  });
   @override
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0),
       ),
-      child:
-      Container(
+      child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          gradient: LinearGradient(colors: [
-            Color(0xFF511158),
-            Color(0xFF511158)
-          ],),),
+          gradient: LinearGradient(
+            colors: [backgroundColorOne, backgroundColorTwo],
+          ),
+        ),
         child: Column(
           children: [
             Container(
               padding: EdgeInsets.fromLTRB(0, 31, 0, 26),
               child: Image.asset(
-                Images.HSQ_LOGO,
+                logo,
                 height: 43,
                 width: 102,
               ),
@@ -54,8 +61,14 @@ class AppOfferCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(Strings.SUBSCRIPE_FOR,style: Theme.of(context).textTheme.headline5,),
-                  Text(Strings.SUBSCRIPTION_RATE, style: Theme.of(context).textTheme.headline5,),
+                  Text(
+                    Strings.SUBSCRIPE_FOR,
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
+                  Text(
+                    Strings.SUBSCRIPTION_RATE,
+                    style: Theme.of(context).textTheme.headline5,
+                  ),
                 ],
               ),
             )

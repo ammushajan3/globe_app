@@ -5,6 +5,7 @@ import 'package:task_app/resources/images.dart';
 import 'package:task_app/resources/strings.dart';
 import 'package:task_app/themes/color.dart';
 import 'package:task_app/widgets/common/app_offer_card.dart';
+import 'package:task_app/widgets/common/movie_app_offer.dart';
 import 'package:task_app/widgets/common/movie_card_section.dart';
 import 'package:task_app/widgets/common/offer_card.dart';
 import 'file:///C:/Users/Admin/AndroidStudioProjects/globe_app/lib/widgets/latest_promo_card.dart';
@@ -31,58 +32,7 @@ class DashboardBody extends StatelessWidget {
             Plan(),
             DashboardBlueBanner(),
             DashboardWhiteBanner(),
-            Container(
-              color: AppColors.COLOR_BLACK,
-              padding: EdgeInsets.only(
-                  left: 24.0, top: 40.0, bottom: 32.0, right: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(
-                    Strings.MYSUBSCRIPTIONS,
-                    style: Theme.of(context).textTheme.headline5,
-                  ),
-                  Container(
-                    width: 270.0,
-                    child: Text(
-                      Strings.SUBSCRIPTIONS_TITLE,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          foreground: Paint()..shader = linearGradient),
-                    ),
-                  ),
-                  MovieCardSection(),
-                  MovieCardSection(),
-                  Container(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          Strings.YOU_MIGHT_ALSO_LIKE,
-                          style: Theme.of(context).textTheme.headline5,
-                        ),
-                        Container(
-                          height: 168.0,
-                          margin:EdgeInsets.only(top:12),
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              AppOfferCard(),
-                              AppOfferCard(),
-                              AppOfferCard(),
-                              AppOfferCard(),
-                            ],
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            )
+            MovieAppOfferSection(),
           ],
         ),
       ),
