@@ -22,7 +22,7 @@ class MovieCardSection extends StatelessWidget {
           children: [
             Row(
               children: [
-                Text(Strings.POPULAR_ON),
+                Text(Strings.POPULAR_ON,style:Theme.of(context).textTheme.headline5),
                 Image.asset(
                   appLogo,
                   height: 21.0,
