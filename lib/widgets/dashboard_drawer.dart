@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_app/widgets/profile_section.dart';
 
 class DashboardDrawer extends StatelessWidget {
   @override
@@ -23,12 +24,12 @@ class DashboardDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            title: Text('Payment'),
+            title: Text('Profile'),
             onTap: () {
               // Update the state of the app
               // ...
               // Then close the drawer
-              Navigator.pop(context);
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileSection(),),);
             },
           ),
         ],

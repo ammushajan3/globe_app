@@ -26,6 +26,7 @@ class MovieAppOfferSection extends StatelessWidget {
             Strings.MYSUBSCRIPTIONS,
             style: Theme.of(context).textTheme.headline5,
           ),
+          SizedBox(height:20.0),
           Container(
             width: 270.0,
             child: Text(
@@ -38,6 +39,7 @@ class MovieAppOfferSection extends StatelessWidget {
                   foreground: Paint()..shader = linearGradient),
             ),
           ),
+          SizedBox(height: 24.0,),
           MovieCardSection(appLogo: Images.NETFLIX_LOGO,),
           MovieCardSection(appLogo: Images.PRIME_LOGO,),
           Container(
