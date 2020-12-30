@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_app/main.dart';
 import 'package:task_app/resources/strings.dart';
 import 'package:task_app/themes/color.dart';
 import 'package:task_app/resources/images.dart';
@@ -28,7 +29,7 @@ class ProfileSection extends StatelessWidget {
               Text('Hello User',style:Theme.of(context).textTheme.bodyText1),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => DashboardAppBar(),),);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard(),),);
                 },
                 child: Text('Go back!'),
               ),
