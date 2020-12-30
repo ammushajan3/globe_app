@@ -29,5 +29,7 @@ class Strings {
   static const HERE_IS_WHAT='Here is what you can get';
   static const FIND_OUT_MORE='Find Out More';
   static const NUMBER_POINTS = '1000 Pts';
-  static const OFFER = 'P 500 OFF on Shoes';
+  static const DISCOUNT = 'P 500 OFF';
+  static const OFFER = 'on Shoes';
+  static const MYSUBSCRIPTIONS = 'My Subscriptions';
 }
