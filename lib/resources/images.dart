@@ -9,4 +9,7 @@ class Images {
   static const ORANGE_ICON ='assets/images/orange_reward_icon.png';
   static const ALDO_LOGO = 'assets/images/aldo_logo.png';
   static const SHOE_COVER_IMG = 'assets/images/shoe.jpg';
+  static const NETFLIX_LOGO = 'assets/images/netflix_logo.png';
+  static const STRANGER_THINGS = 'assets/images/stranger_things.png';
+  static const HSQ_LOGO = 'assets/images/hsq_logo.png';
 }

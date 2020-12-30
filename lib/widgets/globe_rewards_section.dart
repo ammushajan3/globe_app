@@ -41,7 +41,7 @@ class GlobeRewards extends StatelessWidget {
                   gradient: LinearGradient(colors: [
                     Color(0xFFF9AE34),
                     Color(0xFFFF8720)
-                  ])),
+                  ],),),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

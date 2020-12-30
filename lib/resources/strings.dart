@@ -32,4 +32,9 @@ class Strings {
   static const DISCOUNT = 'P 500 OFF';
   static const OFFER = 'on Shoes';
   static const MYSUBSCRIPTIONS = 'My Subscriptions';
+  static const SUBSCRIPTIONS_TITLE = 'With remaining 12GB,you can watch 640 min of video';
+  static const POPULAR_ON = 'Popular on';
+  static const YOU_MIGHT_ALSO_LIKE = 'You might also like';
+  static const SUBSCRIPE_FOR = 'Subscribe for';
+  static const SUBSCRIPTION_RATE = 'P 129.00';
 }

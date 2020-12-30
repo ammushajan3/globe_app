@@ -86,8 +86,6 @@ class SpecialPromo extends StatelessWidget {
                         Color.fromRGBO(0, 0, 0, 0.9),
                         Color.fromRGBO(0, 0, 0, 0.6)
                       ],
-                      begin: FractionalOffset.centerLeft,
-                      end: FractionalOffset.centerRight,
                     ),
                   ),
                   child: FlatButton(
