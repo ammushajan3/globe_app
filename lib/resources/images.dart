@@ -13,4 +13,5 @@ class Images {
   static const STRANGER_THINGS = 'assets/images/stranger_things.png';
   static const HSQ_LOGO = 'assets/images/hsq_logo.png';
   static const IFLIX_LOGO = 'assets/images/iflix_icon.png';
+  static const PRIME_LOGO = 'assets/images/prime_logo.png';
 }

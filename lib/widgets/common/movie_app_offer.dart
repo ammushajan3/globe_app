@@ -38,8 +38,8 @@ class MovieAppOfferSection extends StatelessWidget {
                   foreground: Paint()..shader = linearGradient),
             ),
           ),
-          MovieCardSection(),
-          MovieCardSection(),
+          MovieCardSection(appLogo: Images.NETFLIX_LOGO,),
+          MovieCardSection(appLogo: Images.PRIME_LOGO,),
           Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
