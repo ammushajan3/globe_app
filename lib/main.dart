@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:task_app/themes/color.dart';
 import 'package:task_app/themes/themes.dart';
 import 'package:task_app/widgets/dashboard_app_bar.dar.dart';
 import 'package:task_app/widgets/dashboard_body.dart';

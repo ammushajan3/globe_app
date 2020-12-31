@@ -1,19 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:task_app/resources/images.dart';
 
 import 'package:task_app/resources/strings.dart';
-import 'package:task_app/themes/color.dart';
-import 'package:task_app/widgets/common/movie_card_section.dart';
-import 'package:task_app/widgets/common/offer_card.dart';
-import 'file:///C:/Users/Admin/AndroidStudioProjects/globe_app/lib/widgets/latest_promo_card.dart';
-import 'package:task_app/widgets/common/special_promo.dart';
-import 'package:task_app/widgets/common/subscription_image_card.dart';
-import 'package:task_app/widgets/dashboard_blue_banner.dart';
-import 'package:task_app/widgets/dashboard_white-banner.dart';
-import 'package:task_app/widgets/find_out_more.dart';
-import 'package:task_app/widgets/globe_rewards_section.dart';
-import 'package:task_app/widgets/offers_discount_card_section.dart';
-import 'package:task_app/widgets/plan.dart';
 
 class AppOfferCard extends StatelessWidget {
   final String logo;

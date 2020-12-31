@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/resources/images.dart';
 
-import 'package:task_app/resources/strings.dart';
 import 'package:task_app/themes/color.dart';
-import 'package:task_app/widgets/dashboard_blue_banner.dart';
-import 'package:task_app/widgets/plan.dart';
+
 
 class SpecialPromo extends StatelessWidget {
   final Shader linearGradient = LinearGradient(
