@@ -79,6 +79,7 @@ class SpecialPromo extends StatelessWidget {
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                  height: 54,
                   decoration: new BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     gradient: new LinearGradient(

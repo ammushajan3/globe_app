@@ -33,6 +33,7 @@ class DashboardBody extends StatelessWidget {
             DashboardBlueBanner(),
             DashboardWhiteBanner(),
             MovieAppOfferSection(),
+
           ],
         ),
       ),

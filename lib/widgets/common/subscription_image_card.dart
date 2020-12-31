@@ -4,6 +4,12 @@ import 'package:task_app/resources/images.dart';
 
 
 class SubscriptionImageCard extends StatelessWidget {
+  final String showsImage;
+  SubscriptionImageCard(
+  {
+    this.showsImage,
+}
+);
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -15,7 +21,7 @@ class SubscriptionImageCard extends StatelessWidget {
           width: 140.0,
           decoration: BoxDecoration(
             image: new DecorationImage(
-                image: new AssetImage(Images.STRANGER_THINGS), fit: BoxFit.fill),
+                image: new AssetImage(showsImage), fit: BoxFit.fill),
           )
       ),
     );

@@ -42,9 +42,9 @@ class MovieCardSection extends StatelessWidget {
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
-              SubscriptionImageCard(),
-              SubscriptionImageCard(),
-              SubscriptionImageCard(),
+              SubscriptionImageCard(showsImage:Images.STRANGER_THINGS,),
+              SubscriptionImageCard(showsImage:Images.THIRTEEN_REASONS_WHY),
+              SubscriptionImageCard(showsImage:Images.STRANGER_THINGS),
             ],
           ),
         )
