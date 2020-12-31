@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_app/container/movie_app_container.dart';
 import 'package:task_app/resources/images.dart';
 
 import 'package:task_app/resources/strings.dart';
@@ -33,7 +34,7 @@ class DashboardBody extends StatelessWidget {
             DashboardBlueBanner(),
             DashboardWhiteBanner(),
             MovieAppOfferSection(),
-
+            // MovieAppContainer(),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:task_app/container/movie_app_container.dart';
 import 'package:task_app/resources/images.dart';
 
 import 'package:task_app/resources/strings.dart';
@@ -50,35 +51,7 @@ class MovieAppOfferSection extends StatelessWidget {
                   Strings.YOU_MIGHT_ALSO_LIKE,
                   style: Theme.of(context).textTheme.headline5,
                 ),
-                Container(
-                  height: 168.0,
-                  margin: EdgeInsets.only(top: 12),
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      AppOfferCard(
-                        logo: Images.HSQ_LOGO,
-                        backgroundColorOne: AppColors.COLOR_PURPLE,
-                        backgroundColorTwo: AppColors.COLOR_PURPLE,
-                      ),
-                      AppOfferCard(
-                        logo: Images.IFLIX_LOGO,
-                        backgroundColorOne: AppColors.COLOR_RED_BROWN,
-                        backgroundColorTwo: AppColors.COLOR_LIGHT_RED_BROWN,
-                      ),
-                      AppOfferCard(
-                        logo: Images.HSQ_LOGO,
-                        backgroundColorOne: AppColors.COLOR_PURPLE,
-                        backgroundColorTwo: AppColors.COLOR_PURPLE,
-                      ),
-                      AppOfferCard(
-                        logo: Images.IFLIX_LOGO,
-                        backgroundColorOne: AppColors.COLOR_RED_BROWN,
-                        backgroundColorTwo: AppColors.COLOR_LIGHT_RED_BROWN,
-                      ),
-                    ],
-                  ),
-                )
+                MovieAppContainer(),
               ],
             ),
           ),
