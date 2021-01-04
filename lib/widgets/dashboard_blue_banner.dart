@@ -16,12 +16,14 @@ class DashboardBlueBanner extends StatelessWidget {
         children: [
           Container(
             height: 154.0,
+            
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
                 BalanceCard(balance: Strings.DATA_BALANCE,dataBalance: Strings.REMAINING_DATA,totalBalance: Strings.TOTAL_DATA,),
                 BalanceCard(balance: Strings.LOAD_BALANCE,dataBalance: Strings.PACKAGE_PRICE,totalBalance: Strings.VALID_TILL),
                 BalanceCard(balance: Strings.DATA_BALANCE,dataBalance: Strings.REMAINING_DATA,totalBalance: Strings.TOTAL_DATA),
+                BalanceCard(balance: Strings.LOAD_BALANCE,dataBalance: Strings.PACKAGE_PRICE,totalBalance: Strings.VALID_TILL),
               ],
             ),
           ),

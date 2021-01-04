@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "840408707271",
-    "project_id": "globe-app-aef18",
-    "storage_bucket": "globe-app-aef18.appspot.com"
+    "project_number": "608290956351",
+    "project_id": "globe-app-be4da",
+    "storage_bucket": "globe-app-be4da.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:840408707271:android:08fdcc406051fe560f4ee2",
+        "mobilesdk_app_id": "1:608290956351:android:cdd7c765f05a40ff44048a",
         "android_client_info": {
           "package_name": "com.moonraft.task_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "840408707271-g163f5d2rmalbrd6dsvigsc06nuds8c7.apps.googleusercontent.com",
+          "client_id": "608290956351-7r1h7nnaqiqbaes3sgjutvequna0l8f1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDoVzEDbReuLsXA0R1LONabqLf9_1p0mLk"
+          "current_key": "AIzaSyApvVFqbcRH93qT33lqwqHfJXtE7nv5EZ8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "840408707271-g163f5d2rmalbrd6dsvigsc06nuds8c7.apps.googleusercontent.com",
+              "client_id": "608290956351-7r1h7nnaqiqbaes3sgjutvequna0l8f1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

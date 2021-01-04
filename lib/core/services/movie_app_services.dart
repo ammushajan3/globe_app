@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'dart:async' show Future;
 import 'package:flutter/cupertino.dart';
-import 'package:task_app/core/modal/movie_app_modal.dart';
+import 'package:task_app/core/models/movie_app_modal.dart';
 
 class Services{
   Future<MovieApp> getMovieAppData(BuildContext context) async {

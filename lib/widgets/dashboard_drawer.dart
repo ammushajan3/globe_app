@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/widgets/profile_section.dart';
-
+import 'package:task_app/core/services/auth.dart';
 class DashboardDrawer extends StatelessWidget {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,6 +31,12 @@ class DashboardDrawer extends StatelessWidget {
               // ...
               // Then close the drawer
               Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileSection(),),);
+            },
+          ),
+          ListTile(
+            title: Text('Log Out'),
+            onTap: () async{
+              await _auth.signOut();
             },
           ),
         ],
