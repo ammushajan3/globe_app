@@ -25,10 +25,15 @@ class _RegisterState extends State<Register> {
           FlatButton(onPressed: (){ widget.toggleScreen();}, child: Text('Sign In'))
         ],
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.all(16),
         child: Form(child: Column(
           children: [
             TextFormField(
+              style: TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                  hintText: 'Email'
+              ),
               onChanged: (val)
               {
                 setState(() {
@@ -37,6 +42,10 @@ class _RegisterState extends State<Register> {
               },
             ),
             TextFormField(
+              style: TextStyle(color: Colors.white),
+              decoration: InputDecoration(
+                  hintText: 'Password'
+              ),
               obscureText: true,
               onChanged: (val)
               {
@@ -45,6 +54,7 @@ class _RegisterState extends State<Register> {
                 },);
               },
             ),
+            SizedBox(height: 10),
             RaisedButton(onPressed: () async {
                  dynamic result = await _auth.registerEmailPassword(email, password);
                  if(result == null)

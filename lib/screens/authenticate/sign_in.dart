@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/core/services/auth.dart';
+import 'package:task_app/resources/images.dart';
+import 'package:task_app/themes/color.dart';
 
 class SignIn extends StatefulWidget {
   final Function toggleScreen;
@@ -18,7 +20,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      backgroundColor: AppColors.COLOR_WARM_BLUE,
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Text('Sign In'),
@@ -31,11 +33,17 @@ class _SignInState extends State<SignIn> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Center(
+        child: Container(
+          padding: EdgeInsets.all(16),
           child: Form(
             child: Column(
               children: [
+                Image(image: AssetImage(Images.GLOBE_LOGO)),
                 TextFormField(
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    hintText: 'Email'
+                  ),
                   onChanged: (val) {
                     setState(
                       () {
@@ -45,6 +53,10 @@ class _SignInState extends State<SignIn> {
                   },
                 ),
                 TextFormField(
+                  style: TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                      hintText: 'Password'
+                  ),
                   obscureText: true,
                   onChanged: (val) {
                     setState(
@@ -54,6 +66,7 @@ class _SignInState extends State<SignIn> {
                     );
                   },
                 ),
+                SizedBox(height: 10),
                 RaisedButton(
                   onPressed: () async {
                     dynamic result = _auth.signInEmailPassword(email, password);

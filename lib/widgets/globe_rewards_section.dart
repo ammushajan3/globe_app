@@ -14,7 +14,10 @@ class GlobeRewards extends StatelessWidget {
   ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
   @override
   Widget build(BuildContext context) {
-    return     Container(
+    // variable to check for landscape
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
+    return Container(
       margin: EdgeInsets.only(top: 36.0, bottom: 20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,48 +32,50 @@ class GlobeRewards extends StatelessWidget {
           SizedBox(
             height: 12.0,
           ),
-          Card(
-            child: Container(
-              padding: EdgeInsets.only(
-                  right: 20.0,
-                  top: 16.0,
-                  left: 16.0,
-                  bottom: 16.0),
-              decoration: BoxDecoration(
+          Container(
+            padding:EdgeInsets.only(left:isLandscape
+                ? MediaQuery.of(context).viewPadding.left + 50: MediaQuery.of(context).viewPadding.left,right:isLandscape
+                ? MediaQuery.of(context).viewPadding.right + 50: MediaQuery.of(context).viewPadding.right ),
+            child: Card(
+              child: Container(
+                padding: EdgeInsets.only(
+                    right: 20.0, top: 16.0, left: 16.0, bottom: 16.0),
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  gradient: LinearGradient(colors: [
-                    Color(0xFFF9AE34),
-                    Color(0xFFFF8720)
-                  ],),),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(Strings.YOUR_REWARD_POINT,
+                  gradient: LinearGradient(
+                    colors: [Color(0xFFF9AE34), Color(0xFFFF8720)],
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(Strings.YOUR_REWARD_POINT,
+                            style: Theme.of(context)
+                                .textTheme
+                                .caption
+                                .apply(fontSizeDelta: -1)),
+                        SizedBox(
+                          height: 4.0,
+                        ),
+                        Text(
+                          Strings.POINTS,
                           style: Theme.of(context)
                               .textTheme
-                              .caption
-                              .apply(fontSizeDelta: -1)),
-                      SizedBox(
-                        height: 4.0,
-                      ),
-                      Text(
-                        Strings.POINTS,
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyText1
-                            .apply(color: AppColors.COLOR_WHITE),
-                      ),
-                    ],
-                  ),
-                  Image.asset(
-                    Images.ORANGE_ICON,
-                    height: 57.0,
-                    width: 43.0,
-                  ),
-                ],
+                              .bodyText1
+                              .apply(color: AppColors.COLOR_WHITE),
+                        ),
+                      ],
+                    ),
+                    Image.asset(
+                      Images.ORANGE_ICON,
+                      height: 57.0,
+                      width: 43.0,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),

@@ -21,4 +21,5 @@ class Images {
   static const THIRTEEN_REASONS_WHY = 'assets/images/13-reasons_why.png';
   static const DARK_HILL = 'assets/images/dark_hill.png';
   static const TERMINATOR = 'assets/images/terminator.png';
+  static const GLOBE_LOGO = 'assets/images/globe_logo.png';
 }
