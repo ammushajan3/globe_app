@@ -16,6 +16,7 @@ class DashboardWhiteBanner extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          // special promo section
           SpecialPromo(
             promoTitle: Strings.SPECIAL_PROMOS,
             planName: Strings.PROMO_NAME,
@@ -23,10 +24,12 @@ class DashboardWhiteBanner extends StatelessWidget {
             planSubTitle: Strings.PROMO_SUBTITLE,
             buttonTitle: Strings.CREATE_YOUR_OWN_PROMO,
           ),
+          // latest promo section
           LatestPromo(),
           SizedBox(
             height: 51.0,
           ),
+          // reused special promos for roaming plans
           SpecialPromo(
             promoTitle: Strings.ROAMING_PLANS,
             planName: Strings.PROMO_NAME,
@@ -34,8 +37,11 @@ class DashboardWhiteBanner extends StatelessWidget {
             planSubTitle: Strings.ROAM_WORRY_FREE,
             buttonTitle: Strings.EXPLORE_ROAMING,
           ),
+          // globe rewards section
           GlobeRewards(),
+          // offer discount section
           OffersDiscountSection(),
+          // find out more section
           FindOutMoreButton(),
         ],
       ),

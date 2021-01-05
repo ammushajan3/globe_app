@@ -10,6 +10,9 @@ class LatestPromo extends StatelessWidget {
   ).createShader(Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
   @override
   Widget build(BuildContext context) {
+    // variable to check for landscape
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
     return Container(
       child: Column(
         children: [
@@ -33,10 +36,13 @@ class LatestPromo extends StatelessWidget {
             ),
           ),
           Container(
-            height: 168.0,
+            height: isLandscape ? MediaQuery.of(context).size.height*0.41 : MediaQuery.of(context).size.height*0.247,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
+                // social media card displayed in horizontal view
+                SocialMediaCard(),
+                SocialMediaCard(),
                 SocialMediaCard(),
                 SocialMediaCard(),
                 SocialMediaCard(),

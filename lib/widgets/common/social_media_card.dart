@@ -6,6 +6,9 @@ import 'package:task_app/resources/strings.dart';
 class SocialMediaCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // variable to check for landscape
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0),
@@ -19,7 +22,7 @@ class SocialMediaCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              padding: EdgeInsets.fromLTRB(20, 20, 0, 26),
+              padding: EdgeInsets.fromLTRB(20, 20, 15, 26),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -48,7 +51,7 @@ class SocialMediaCard extends StatelessWidget {
                 ),
               ),
               child: FlatButton(
-                height: 68.0,
+                height: isLandscape ? MediaQuery.of(context).size.height*0.165 : MediaQuery.of(context).size.height*0.10,
                 onPressed: () {
                   /*...*/
                 },
