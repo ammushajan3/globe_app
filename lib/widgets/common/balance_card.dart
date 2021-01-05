@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/resources/images.dart';
-import 'package:task_app/resources/strings.dart';
 import 'package:task_app/themes/color.dart';
+
 class BalanceCard extends StatelessWidget {
   final String balance;
   final String dataBalance;
   final String totalBalance;
-  BalanceCard(
-  {
-    this.balance,this.dataBalance,this.totalBalance
-}
-      );
+  BalanceCard({this.balance, this.dataBalance, this.totalBalance});
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       width: 136.0,
       child: Card(
         shape: RoundedRectangleBorder(
@@ -38,11 +34,11 @@ class BalanceCard extends StatelessWidget {
                 balance,
                 style: Theme.of(context).textTheme.subtitle1,
               ),
-              Text(dataBalance,
-                  style: Theme.of(context).textTheme.bodyText1),
-              SizedBox(height: 12.0,),
-              Text(totalBalance,
-                  style: Theme.of(context).textTheme.subtitle1),
+              Text(dataBalance, style: Theme.of(context).textTheme.bodyText1),
+              SizedBox(
+                height: 12.0,
+              ),
+              Text(totalBalance, style: Theme.of(context).textTheme.subtitle1),
             ],
           ),
         ),

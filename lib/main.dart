@@ -12,11 +12,11 @@ import 'package:task_app/themes/color.dart';
 import 'package:task_app/widgets/find_out_more.dart';
 import 'package:task_app/widgets/globe_app.dart';
 import 'package:provider/provider.dart';
+
 void main() {
-  runApp(
-      MyApp()
-  );
+  runApp(MyApp());
 }
+
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();

@@ -16,9 +16,13 @@ class DashboardBody extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // plan card section
             Plan(),
+            // blue banner section
             DashboardBlueBanner(),
+            // white banner section
             DashboardWhiteBanner(),
+            // movie and offers section
             MovieAppOfferSection(),
             // MovieAppContainer(),
           ],

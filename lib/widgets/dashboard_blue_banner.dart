@@ -8,55 +8,58 @@ import 'package:task_app/widgets/common/recommended_plans_card.dart';
 class DashboardBlueBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      padding: EdgeInsets.only(left: 14.0,top:32.0,bottom: 33.0),
-      color: AppColors.COLOR_ICE_BLUE,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            height: 154.0,
-            
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                BalanceCard(balance: Strings.DATA_BALANCE,dataBalance: Strings.REMAINING_DATA,totalBalance: Strings.TOTAL_DATA,),
-                BalanceCard(balance: Strings.LOAD_BALANCE,dataBalance: Strings.PACKAGE_PRICE,totalBalance: Strings.VALID_TILL),
-                BalanceCard(balance: Strings.DATA_BALANCE,dataBalance: Strings.REMAINING_DATA,totalBalance: Strings.TOTAL_DATA),
-                BalanceCard(balance: Strings.LOAD_BALANCE,dataBalance: Strings.PACKAGE_PRICE,totalBalance: Strings.VALID_TILL),
-              ],
+    return  LayoutBuilder(builder: (ctx,constraint){
+      return Container(
+        padding: EdgeInsets.only(left: 14.0,top:32.0,bottom: 33.0),
+        color: AppColors.COLOR_ICE_BLUE,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height*0.22,
+
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  BalanceCard(balance: Strings.DATA_BALANCE,dataBalance: Strings.REMAINING_DATA,totalBalance: Strings.TOTAL_DATA,),
+                  BalanceCard(balance: Strings.LOAD_BALANCE,dataBalance: Strings.PACKAGE_PRICE,totalBalance: Strings.VALID_TILL),
+                  BalanceCard(balance: Strings.DATA_BALANCE,dataBalance: Strings.REMAINING_DATA,totalBalance: Strings.TOTAL_DATA),
+                  BalanceCard(balance: Strings.LOAD_BALANCE,dataBalance: Strings.PACKAGE_PRICE,totalBalance: Strings.VALID_TILL),
+                ],
+              ),
             ),
-          ),
-          Container(
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top:53.0,bottom:13.0,left:8.0,right:24.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(Strings.RECOMMENDED,style:Theme.of(context).textTheme.subtitle1,),
-                      Text(Strings.VIEW_ALL,style: Theme.of(context).textTheme.headline6,),
-                    ],
+            Container(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top:53.0,bottom:13.0,left:8.0,right:24.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(Strings.RECOMMENDED,style:Theme.of(context).textTheme.subtitle1,),
+                        Text(Strings.VIEW_ALL,style: Theme.of(context).textTheme.headline6,),
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  height: 65.0,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      RecommendedPlansCard(),
-                      RecommendedPlansCard(),
-                      RecommendedPlansCard(),
-                      RecommendedPlansCard(),
-                    ],
+                  Container(
+                    height:  MediaQuery.of(context).size.height*0.1,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        RecommendedPlansCard(),
+                        RecommendedPlansCard(),
+                        RecommendedPlansCard(),
+                        RecommendedPlansCard(),
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
+                ],
+              ),
+            )
+          ],
+        ),
+      );
+    },);
+
   }
 }
