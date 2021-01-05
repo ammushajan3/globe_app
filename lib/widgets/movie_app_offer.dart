@@ -41,7 +41,9 @@ class MovieAppOfferSection extends StatelessWidget {
             ),
           ),
           SizedBox(height: 24.0,),
+          // movie card section for netflix
           MovieCardSection(appLogo: Images.NETFLIX_LOGO,),
+          // movie card section for prime video
           MovieCardSection(appLogo: Images.PRIME_LOGO,),
           Container(
             child: Column(
@@ -51,6 +53,7 @@ class MovieAppOfferSection extends StatelessWidget {
                   Strings.YOU_MIGHT_ALSO_LIKE,
                   style: Theme.of(context).textTheme.headline5,
                 ),
+                // movie app section
                 MovieAppContainer(),
               ],
             ),

@@ -12,7 +12,16 @@
 "image": "assets/images/hsq_logo.png",
 "number": "P 1675.00",
 "subdata": "Valid till 26 Dec"
-}
-
+},
+  {"id":4,
+    "image": "assets/images/iflix_icon.png",
+    "number": "300 MB",
+    "subdata": "of 12 GB"
+  },
+  {"id":5,
+    "image": "assets/images/hsq_logo.png",
+    "number": "P 1675.00",
+    "subdata": "Valid till 26 Dec"
+  }
 ]
 }

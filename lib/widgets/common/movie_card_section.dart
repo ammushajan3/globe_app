@@ -14,6 +14,8 @@ class MovieCardSection extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
     return Column(
       children: [
         Container(
@@ -37,12 +39,15 @@ class MovieCardSection extends StatelessWidget {
           ],
         )),
         Container(
-          height: 190.0,
+          height: isLandscape ? MediaQuery.of(context).size.height*0.41 : MediaQuery.of(context).size.height*0.25,
           margin: EdgeInsets.only(top: 12.0, bottom: 32.0),
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
+              // subscription image card displayed in horizontal view
               SubscriptionImageCard(showsImage:Images.STRANGER_THINGS,),
+              SubscriptionImageCard(showsImage:Images.THIRTEEN_REASONS_WHY),
+              SubscriptionImageCard(showsImage:Images.STRANGER_THINGS),
               SubscriptionImageCard(showsImage:Images.THIRTEEN_REASONS_WHY),
               SubscriptionImageCard(showsImage:Images.STRANGER_THINGS),
             ],
