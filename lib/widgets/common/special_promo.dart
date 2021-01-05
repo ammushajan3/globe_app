@@ -27,6 +27,8 @@ class SpecialPromo extends StatelessWidget {
       this.buttonTitle});
   @override
   Widget build(BuildContext context) {
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -38,73 +40,79 @@ class SpecialPromo extends StatelessWidget {
               foreground: Paint()..shader = linearGradient),
         ),
         SizedBox(height: 12.0),
-        Card(
-          child: Container(
-            decoration: BoxDecoration(
-              image: new DecorationImage(
-                  image: new AssetImage(Images.SPECIAL_PROMO),
-                  fit: BoxFit.fill),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 17.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(planName,
-                          style: Theme.of(context).textTheme.headline5),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Text(
-                        planTitle,
-                        style: TextStyle(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                            foreground: Paint()..shader = promoTitleGradient),
-                      ),
-                      Text(
-                        planSubTitle,
-                        style: Theme.of(context)
-                            .textTheme
-                            .subtitle1
-                            .apply(color: AppColors.COLOR_WHITE),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                  height: 54,
-                  decoration: new BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    gradient: new LinearGradient(
-                      colors: [
-                        Color.fromRGBO(0, 0, 0, 0.9),
-                        Color.fromRGBO(0, 0, 0, 0.6)
-                      ],
-                    ),
-                  ),
-                  child: FlatButton(
-                    padding: EdgeInsets.all(0.0),
-                    onPressed: () {
-                      /*...*/
-                    },
-                    child: Row(
+        Container(
+          padding:EdgeInsets.only(left:isLandscape
+              ? MediaQuery.of(context).viewPadding.left + 50: MediaQuery.of(context).viewPadding.left,right:isLandscape
+              ? MediaQuery.of(context).viewPadding.right + 50: MediaQuery.of(context).viewPadding.right ),
+          height:  isLandscape ? MediaQuery.of(context).size.height*0.39 : MediaQuery.of(context).size.height*0.235,
+          child: Card(
+            child: Container(
+              decoration: BoxDecoration(
+                image: new DecorationImage(
+                    image: new AssetImage(Images.SPECIAL_PROMO),
+                    fit: BoxFit.fill),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 17.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(buttonTitle,
+                        Text(planName,
                             style: Theme.of(context).textTheme.headline5),
-                        Icon(
-                          Icons.chevron_right_sharp,
-                          color: AppColors.COLOR_WHITE,
-                        )
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text(
+                          planTitle,
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              foreground: Paint()..shader = promoTitleGradient),
+                        ),
+                        Text(
+                          planSubTitle,
+                          style: Theme.of(context)
+                              .textTheme
+                              .subtitle1
+                              .apply(color: AppColors.COLOR_WHITE),
+                        ),
                       ],
                     ),
                   ),
-                ),
-              ],
+                  Container(
+                    padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                    height: 54,
+                    decoration: new BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      gradient: new LinearGradient(
+                        colors: [
+                          Color.fromRGBO(0, 0, 0, 0.9),
+                          Color.fromRGBO(0, 0, 0, 0.6)
+                        ],
+                      ),
+                    ),
+                    child: FlatButton(
+                      padding: EdgeInsets.all(0.0),
+                      onPressed: () {
+                        /*...*/
+                      },
+                      child: Row(
+                        children: [
+                          Text(buttonTitle,
+                              style: Theme.of(context).textTheme.headline5),
+                          Icon(
+                            Icons.chevron_right_sharp,
+                            color: AppColors.COLOR_WHITE,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

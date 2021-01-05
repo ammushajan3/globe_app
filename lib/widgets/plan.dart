@@ -10,6 +10,7 @@ class Plan extends StatefulWidget {
 }
 
 class PlanState extends State<Plan> {
+  // variable to check if the drop down is pressed or not
   bool pressed = false;
 
   @override
@@ -40,6 +41,7 @@ class PlanState extends State<Plan> {
                         : Icon(Icons.keyboard_arrow_down_outlined,
                             color: AppColors.COLOR_BLACK),
                     onPressed: () {
+                      // condition to toggle the drop down
                       setState(() {
                         pressed = !pressed;
                         print(pressed);
