@@ -31,6 +31,7 @@ class _DashboardState extends State<Dashboard> {
     LatestPromo(),
   ];
 
+  // function for content change in nav bar
   void _onItemTapped(int index) {
     _navigationQueue.addLast(_selectedIndex);
     setState(() {
@@ -40,7 +41,7 @@ class _DashboardState extends State<Dashboard> {
     //   _navigationList.add(_selectedIndex);
     // print('selected index: $_navigationList');
   }
-
+// on back pressed function
   Future<bool> _onBackPressed() {
     return showDialog(
         context: context,
@@ -67,6 +68,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
+      // function to stop user from exit the app
       onWillPop: (() async {
         if (_navigationQueue.isEmpty)
           _onBackPressed();
@@ -83,18 +85,13 @@ class _DashboardState extends State<Dashboard> {
           child: DashboardDrawer(),
         ),
         body: Center(
+          // selected items from the bottom nav bar
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
-        // ListView.builder(
-        //   itemCount: 10,
-        //   itemBuilder: (ctx,index) =>Container(
-        //     padding: EdgeInsets.all(8.0),
-        //     child: Text('it works',style: TextStyle(color: Colors.black),),
-        //   ),),
-
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           backgroundColor: AppColors.COLOR_WHITE,
+          // bottom nav bar items
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Image.asset(
@@ -129,8 +126,11 @@ class _DashboardState extends State<Dashboard> {
               label: 'More',
             ),
           ],
+          // current index of the bottom nav
           currentIndex: _selectedIndex,
+          // color of selected item in nav
           selectedItemColor: Colors.amber[800],
+          // color of unselected item in nav
           unselectedItemColor: AppColors.COLOR_BLACK,
           onTap: _onItemTapped,
         ),
