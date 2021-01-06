@@ -48,7 +48,7 @@ class _SignInState extends State<SignIn> {
               SizedBox(height: 20.0),
               TextFormField(
                 style: TextStyle(color: Colors.white),
-                decoration: InputDecoration(hintText: 'email'),
+                decoration: InputDecoration(hintText: 'Email'),
                 validator: (val) => val.isEmpty ? 'Enter an email' : null,
                 onChanged: (val) {
                   setState(() => email = val);

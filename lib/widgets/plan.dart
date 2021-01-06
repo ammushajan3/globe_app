@@ -12,7 +12,29 @@ class Plan extends StatefulWidget {
 class PlanState extends State<Plan> {
   // variable to check if the drop down is pressed or not
   bool pressed = false;
+  void _openModel()
+  {
+    showDialog(context: context,builder: (context) =>
+        Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
+          child: Container(
+            width: 100,
+            height: 100,
+            padding: EdgeInsets.all(16),
+            child:Column(
+              children: [
+                Text('Edit your number',style: Theme.of(context).textTheme.subtitle2,),
+                Text(
+                  Strings.NUMBER,
+                  style: Theme.of(context).textTheme.subtitle2,
+                ),
+              ],
+            )
 
+          )
+        ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -51,7 +73,7 @@ class PlanState extends State<Plan> {
 
                 ],
               ),
-              Icon(Icons.add, color: AppColors.COLOR_BLACK),
+              IconButton(icon: Icon(Icons.add), onPressed: _openModel,color: AppColors.COLOR_BLACK)
             ],
           ),
           pressed

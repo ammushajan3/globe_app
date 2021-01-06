@@ -4,6 +4,12 @@ import 'package:task_app/resources/images.dart';
 import 'package:task_app/resources/strings.dart';
 
 class SocialMediaCard extends StatelessWidget {
+  final bgImage;
+  final icon;
+  final title;
+  SocialMediaCard({
+    this.bgImage,this.icon,this.title
+});
   @override
   Widget build(BuildContext context) {
     // variable to check for landscape
