@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_app/core/services/auth.dart';
+import 'package:task_app/widgets/common/loading.dart';
 class Register extends StatefulWidget {
   final Function toggleScreen;
   Register({
@@ -10,13 +11,14 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
+  bool loader = false;
   final AuthService _auth = AuthService();
   String email ='';
   String password = '';
   String error = '';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loader ? Loader() : Scaffold(
       backgroundColor: Colors.indigo,
       appBar: AppBar(
         backgroundColor: Colors.green,
@@ -57,15 +59,23 @@ class _RegisterState extends State<Register> {
             SizedBox(height: 10),
             RaisedButton(onPressed: () async {
                  dynamic result = await _auth.registerEmailPassword(email, password);
+                 setState(() {
+                   loader=true;
+                 });
+                 print(result);
                  if(result == null)
                    {
                      setState(() {
                        error = 'please provide a valid email';
+                       loader=false;
                      });
                    }
             },
               child: Text('Register'),),
-            Text(error),
+        Text(
+          error,
+          style: TextStyle(color: Colors.red, fontSize: 14.0),
+        ),
 
           ],
         ),),
