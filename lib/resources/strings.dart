@@ -40,4 +40,6 @@ class Strings {
   static const YOU_MIGHT_ALSO_LIKE = 'You might also like';
   static const SUBSCRIPE_FOR = 'Subscribe for';
   static const SUBSCRIPTION_RATE = 'P 129.00';
+  static const GLOBE_PLAN ='GoUNLI180';
+  static const GLOBE_VALIDITY ='15 days UNLI to Globe';
 }
