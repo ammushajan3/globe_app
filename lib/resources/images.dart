@@ -22,4 +22,8 @@ class Images {
   static const DARK_HILL = 'assets/images/dark_hill.png';
   static const TERMINATOR = 'assets/images/terminator.png';
   static const GLOBE_LOGO = 'assets/images/globe_logo.png';
+  static const HAIRSTYLE_OFFER = 'assets/images/hairstyle_offer.png';
+  static const LATEST_PROMO_1 = 'assets/images/latest_promo_1.png';
+  static const RAFFLES_ICON = 'assets/images/raffles_icon.png';
+  static const FACEBOOK_ICON = 'assets/images/facebook_icon.png';
 }

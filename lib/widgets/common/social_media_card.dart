@@ -22,7 +22,7 @@ class SocialMediaCard extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           image: new DecorationImage(
-              image: new AssetImage(Images.LATEST_PROMO), fit: BoxFit.fill),
+              image: new AssetImage(bgImage), fit: BoxFit.fill),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,14 +33,14 @@ class SocialMediaCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset(
-                    Images.SPOTIFY_ICON,
+                    icon,
                     height: 18.0,
                     width: 18.0,
                   ),
                   SizedBox(
                     height: 15.0,
                   ),
-                  Text(Strings.SPOTIFY_PREMIUM),
+                  Text(title),
                 ],
               ),
             ),

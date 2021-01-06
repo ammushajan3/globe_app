@@ -41,12 +41,12 @@ class LatestPromo extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               children: [
                 // social media card displayed in horizontal view
-                SocialMediaCard(),
-                SocialMediaCard(),
-                SocialMediaCard(),
-                SocialMediaCard(),
-                SocialMediaCard(),
-                SocialMediaCard(),
+                SocialMediaCard(bgImage: Images.LATEST_PROMO,icon:  Images.SPOTIFY_ICON,title: Strings.SPOTIFY_PREMIUM,),
+                SocialMediaCard(bgImage: Images.LATEST_PROMO_1,icon:  Images.FACEBOOK_ICON,title: Strings.FACEBOOK_TITLE,),
+                SocialMediaCard(bgImage: Images.LATEST_PROMO,icon:  Images.SPOTIFY_ICON,title: Strings.SPOTIFY_PREMIUM,),
+                SocialMediaCard(bgImage: Images.LATEST_PROMO_1,icon:  Images.FACEBOOK_ICON,title: Strings.FACEBOOK_TITLE,),
+                SocialMediaCard(bgImage: Images.LATEST_PROMO,icon:  Images.SPOTIFY_ICON,title: Strings.SPOTIFY_PREMIUM,),
+                SocialMediaCard(bgImage: Images.LATEST_PROMO_1,icon:  Images.FACEBOOK_ICON,title: Strings.FACEBOOK_TITLE,),
               ],
             ),
           )
