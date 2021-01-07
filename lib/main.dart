@@ -27,9 +27,12 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return StreamProvider<User>.value(
       value: AuthService().user,
-      child: MaterialApp(
-        theme: Themes.lightTheme,
-        home: Wrapper(),
+      child: MediaQuery(
+        data: new MediaQueryData(),
+        child: MaterialApp(
+          theme: Themes.lightTheme,
+          home: Wrapper(),
+        ),
       ),
     );
   }
